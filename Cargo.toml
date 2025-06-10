@@ -1,0 +1,20 @@
+[package]
+name = "argon2derive"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# TODO: Switch to `argon2` once https://github.com/RustCrypto/password-hashes/pull/547 lands
+argon2-kdf = "1.6"
+
+clap = { version = "4.5", features = ["derive"] }
+base64 = "0.22"
+x25519-dalek = { version = "2.0", features = ["static_secrets"] }
+rpassword = "7.3"
+hex = "0.4"
+bech32 = "0.9"
+anyhow = "1.0"
+rand = "0.9"
+directories = "6.0.0"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
